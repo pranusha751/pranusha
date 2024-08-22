@@ -1,0 +1,14 @@
+n = 3 
+m = 3  
+
+difficulty = [2, 4, 6]
+profit = [3, 5, 8]
+worker = [4, 5, 6]
+max_profit = 0
+for w in worker:
+    best_profit = 0
+    for j in range(n):
+        if w >= difficulty[j]:
+            best_profit = max(best_profit, profit[j])
+    max_profit += best_profit
+print(max_profit)
